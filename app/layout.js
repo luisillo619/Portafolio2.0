@@ -1,8 +1,5 @@
-"use client";
 import { SectionRefsProvider } from "@/context/RefsContext";
 import "./globals.css";
-import { useEffect, useState } from "react";
-import Aos from "aos";
 
 export const metadata = {
   title: "Portafolio",
