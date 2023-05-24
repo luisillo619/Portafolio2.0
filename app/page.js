@@ -4,7 +4,7 @@ import { ContactMe } from "@/components/layouts/ContactMe";
 import { Experience } from "@/components/layouts/Experience";
 import { Hero } from "@/components/layouts/Hero";
 import { Projects } from "@/components/layouts/Projects";
-import { Header } from "@/components/layouts/header";
+import { Header } from "@/components/layouts/Header";
 import { Skills } from "@/components/layouts/skills";
 import { SectionRefsContext } from "@/context/RefsContext";
 import Aos from "aos";
