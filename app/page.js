@@ -53,7 +53,7 @@ export default function HomePage() {
                 <Experience />
               </Section>
 
-              <Section height="80vh" width="110%" reference={skillsRef}>
+              <Section height="90vh" reference={skillsRef}>
                 <Skills />
               </Section>
 
