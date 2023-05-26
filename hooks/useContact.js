@@ -6,7 +6,8 @@ export const useContact = (initialForm, validateForm) => {
   const [form, setForm] = useState(initialForm);
   const [loading, setLoading] = useState(false);
   const MESSAGE_ERROR =
-    "Error al enviar el mensaje. Por favor, inténtalo de nuevo.";
+      "Error al enviar el mensaje. Por favor, inténtalo de nuevo.",
+    MESSAGE_SUCCESS = "El mensaje se envió correctamente";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,7 +21,7 @@ export const useContact = (initialForm, validateForm) => {
     e.preventDefault();
     const formErrors = validateForm(form);
     const errors = Object.values(formErrors);
-    
+
     if (errors.length === 0) {
       try {
         setLoading(true);
@@ -30,7 +31,7 @@ export const useContact = (initialForm, validateForm) => {
           e.target,
           process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
         );
-        toast.success("Mensaje enviado correctamente", {
+        toast.success(MESSAGE_SUCCESS, {
           position: "bottom-right",
           autoClose: 1500,
           transition: Zoom,
