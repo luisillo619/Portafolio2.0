@@ -40,7 +40,7 @@ export default function HomePage() {
         <div className="flex flex-col justify-between items-center h-full w-full">
           <>
             <Header />
-            <div className="flex flex-col justify-center items-center w-full max-w-[1200px] h-full min-h-[1800px] gap-y-28 px-5 md:px-24 pt-12">
+            <div className="flex flex-col justify-center items-center w-full max-w-[1200px] h-full min-h-[1800px] gap-y-28 px-5 md:px-24 mt-12 mb-24">
               <Section height="80vh">
                 <Hero />
               </Section>
