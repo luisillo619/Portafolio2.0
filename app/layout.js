@@ -1,5 +1,6 @@
-import { SectionRefsProvider } from "@/context/RefsContext";
+import { GlobalProvider } from "./GlobalProvider";
 import "./globals.css";
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata = {
   title: "Portafolio",
@@ -10,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="w-full h-full">
-        <SectionRefsProvider> {children}</SectionRefsProvider>
+        <GlobalProvider>{children}</GlobalProvider>
       </body>
     </html>
   );

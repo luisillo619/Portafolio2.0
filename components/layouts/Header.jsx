@@ -1,22 +1,21 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect, useCallback, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import Image from "next/image";
 import { CiLinkedin } from "react-icons/ci";
 import { RiGithubFill } from "react-icons/ri";
 import { SectionRefsContext } from "@/context/RefsContext";
-import { useRouter } from "next/navigation";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { throttle } from "lodash";
+
 import ScrollUp from "./ScrollUp/ScrollUp";
 
 const useScrollPosition = () => {
   const [scrollPosition, setScrollPosition] = useState(null);
 
   useEffect(() => {
-    const onScroll = throttle(() => {
+    const onScroll = () => {
       setScrollPosition(window.scrollY + 100);
-    }, 100);
+    };
 
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -29,9 +28,9 @@ const useSectionPosition = (ref) => {
   const [position, setPosition] = useState(null);
 
   useEffect(() => {
-    const handleResize = throttle(() => {
+    const handleResize = () => {
       setPosition(ref.current.offsetTop);
-    }, 100);
+    };
 
     setPosition(ref.current.offsetTop);
     window.addEventListener("resize", handleResize);
@@ -45,7 +44,7 @@ const useSectionPosition = (ref) => {
 export const Header = () => {
   const { aboutRef, experienceRef, skillsRef, projectsRef, scrollToSection } =
     useContext(SectionRefsContext);
-  const router = useRouter();
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
   const scrollPosition = useScrollPosition();
@@ -57,13 +56,6 @@ export const Header = () => {
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
-
-  const scrollToSectionAndUpdate = useCallback(
-    (ref) => {
-      scrollToSection(ref);
-    },
-    [scrollToSection]
-  );
 
   useEffect(() => {
     if (scrollPosition >= projectsPosition) {
@@ -77,17 +69,7 @@ export const Header = () => {
     } else {
       setActiveSection(null);
     }
-  }, [
-    scrollPosition,
-    aboutPosition,
-    experiencePosition,
-    skillsPosition,
-    projectsPosition,
-    aboutRef,
-    experienceRef,
-    skillsRef,
-    projectsRef,
-  ]);
+  }, [scrollPosition]);
 
   const SectionButton = ({ sectionRef, children, isHamburgerMenu = false }) => (
     <li>
@@ -95,14 +77,14 @@ export const Header = () => {
         className={
           isHamburgerMenu
             ? activeSection === sectionRef
-              ? "w-full block px-4 py-2 text-left bg-indigo-500 text-white"
+              ? "w-full block px-4 py-2 text-left bg-red-400 text-white"
               : "w-full block px-4 py-2 text-left text-gray-800 hover:bg-indigo-500 hover:text-white"
             : activeSection === sectionRef
             ? "bg-red-400"
             : ""
         }
         onClick={() => {
-          scrollToSectionAndUpdate(sectionRef);
+          scrollToSection(sectionRef);
           if (isHamburgerMenu) setIsOpen(false);
         }}
       >
