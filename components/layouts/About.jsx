@@ -23,7 +23,7 @@ export const About = () => {
           />
         </div>
         <div className="w-full md:w-7/12 h-full flex items-center justify-center ">
-          <p className="text-sm md:text-base text-center md:text-start">
+          <p className="text-sm md:text-base md:text-start text-justify">
             Desarrollador Full Stack, siempre buscando desafíos interesantes.
             Pasión por la resolución de problemas complejos y la creación de
             productos de software eficientes y escalables.
