@@ -1,10 +1,12 @@
 "use client";
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import BackgroundCircles from "./cicles/BackgroundCircles";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { SectionRefsContext } from "@/context/RefsContext";
+import Link from "next/link";
+
 
 export const Hero = () => {
   const { contactRef, scrollToSection } = useContext(SectionRefsContext);
@@ -32,7 +34,7 @@ export const Hero = () => {
         <div className="flex justify-center space-x-5 w-full md:justify-start">
           <button className="flex flex-row-reverse px-5 py-2 bg-[#2298D6] rounded-full text-white">
             <ArrowDownTrayIcon className="w-5 h-5 text-[#F7AB0A]" />
-            <span>Ver CV</span>
+            <Link href="/cv/Luis_Rangel_CV.pdf" target="_blank">Descargar CV</Link>
           </button>
           <button
             className="px-5 py-2 bg-[#728088] rounded-full text-white"

@@ -4,7 +4,7 @@ export const hardSkills = {
       id: 23,
       title: "typescript",
       docs: "https://www.typescriptlang.org/docs/",
-      src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1684802876/portafolio/skills/programming%20Languages/TYPESCRIPT-removebg-preview_skyn6z.png",
+      src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1693186216/portafolio/skills/programming%20Languages/typescript_yrozoq.png",
     },
     {
       id: 6,
@@ -27,6 +27,43 @@ export const hardSkills = {
   ],
 
   frontend: [
+    {
+      id: 16,
+      title: "nextJs",
+      docs: "https://nextjs.org/docs",
+      src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1684802866/portafolio/skills/Front%20end/NEXTJS-removebg-preview_sez1bb.png",
+    },
+    {
+      id: 11,
+      title: "react",
+      docs: "https://reactjs.org/docs",
+      src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1684802867/portafolio/skills/Front%20end/REACT-removebg-preview_jwpbnk.png",
+    },
+    {
+      id: 17,
+      title: "redux",
+      docs: "https://redux.js.org/introduction/getting-started",
+      src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1684802868/portafolio/skills/Front%20end/REDUX-removebg-preview_qn2btp.png",
+    },
+    {
+      id: 27,
+      title: "angular",
+      docs: "https://angular.io/docs",
+      src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1684802866/portafolio/skills/Front%20end/ANGULAR-removebg-preview_kxmk8a.png",
+    },
+    {
+      id: 15,
+      title: "reactNative",
+      docs: "https://reactnative.dev/docs",
+      src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1684802866/portafolio/skills/Front%20end/REACTNATIVE-removebg-preview_ijgxey.png",
+    },
+
+    {
+      id: 4,
+      title: "github",
+      docs: "https://docs.github.com/en",
+      src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1684802882/portafolio/skills/Soft%20skills/GITHUB-removebg-preview_oe0vjb.png",
+    },
     {
       id: 5,
       title: "html5",
@@ -51,36 +88,6 @@ export const hardSkills = {
       docs: "https://sass-lang.com/documentation",
       src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1684802870/portafolio/skills/Front%20end/TAILWIND-removebg-preview_gkbfrx.png",
     },
-    {
-      id: 16,
-      title: "nextJs",
-      docs: "https://nextjs.org/docs",
-      src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1684802866/portafolio/skills/Front%20end/NEXTJS-removebg-preview_sez1bb.png",
-    },
-    {
-      id: 17,
-      title: "redux",
-      docs: "https://redux.js.org/introduction/getting-started",
-      src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1684802868/portafolio/skills/Front%20end/REDUX-removebg-preview_qn2btp.png",
-    },
-    {
-      id: 27,
-      title: "angular",
-      docs: "https://angular.io/docs",
-      src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1684802866/portafolio/skills/Front%20end/ANGULAR-removebg-preview_kxmk8a.png",
-    },
-    {
-      id: 15,
-      title: "reactNative",
-      docs: "https://reactnative.dev/docs",
-      src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1684802866/portafolio/skills/Front%20end/REACTNATIVE-removebg-preview_ijgxey.png",
-    },
-    {
-      id: 11,
-      title: "react",
-      docs: "https://reactjs.org/docs",
-      src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1684802867/portafolio/skills/Front%20end/REACT-removebg-preview_jwpbnk.png",
-    },
   ],
 
   backend: [
@@ -89,6 +96,12 @@ export const hardSkills = {
       title: "nodeJs",
       docs: "https://nodejs.org/docs",
       src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1684802836/portafolio/skills/Back%20end/NODE-removebg-preview_tfbqea.png",
+    },
+    {
+      id: 30,
+      title: "spring Boot",
+      docs: "https://spring.io/projects/spring-boot",
+      src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1693186900/portafolio/skills/programming%20Languages/spring-protafolio_d9jxkj.png",
     },
     {
       id: 10,
@@ -158,12 +171,6 @@ export const hardSkills = {
 };
 
 export const softSkills = [
-  {
-    id: 4,
-    title: "github",
-    docs: "https://docs.github.com/en",
-    src: "https://res.cloudinary.com/drkzjxpza/image/upload/v1684802882/portafolio/skills/Soft%20skills/GITHUB-removebg-preview_oe0vjb.png",
-  },
   {
     id: 25,
     title: "kanban",
