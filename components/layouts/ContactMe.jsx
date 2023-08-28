@@ -80,22 +80,24 @@ export const ContactMe = () => {
 
         <section className="w-full h-[75%]">
           <form
-            className="w-full h-full flex flex-col items-center border"
+            className="w-full h-full grid grid-cols-2 gap-4 p-4 border border-red-300"
             onSubmit={handleSubmit}
           >
             <input
-              placeholder="Ingresa tú nombre"
+              placeholder="Ingresa tu nombre"
               type="text"
               name="name"
               value={contact.name}
               onChange={handleChange}
+              className="border  p-2"
             />
             <input
-              placeholder="Ingresa tú correo"
+              placeholder="Ingresa tu correo"
               type="email"
               name="email"
               value={contact.email}
               onChange={handleChange}
+              className="border p-2"
             />
             <input
               placeholder="Ingresa el asunto"
@@ -103,6 +105,7 @@ export const ContactMe = () => {
               name="subject"
               value={contact.subject}
               onChange={handleChange}
+              className="border p-2"
             />
             <textarea
               placeholder="Ingresa el mensaje"
@@ -110,17 +113,19 @@ export const ContactMe = () => {
               name="message"
               value={contact.message}
               onChange={handleChange}
+              className="col-span-2 p-2 border"
             />
-            <div>
+            <div className="col-span-2 ">
               <button
                 type="submit"
                 disabled={loading ? true : false}
+                className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
               >
-                {loading ? "Envindo..." : "Enviar"}
+                {loading ? "Enviando..." : "Enviar"}
               </button>
               <div
                 style={{ display: !loading ? "none" : "block" }}
-                className="flex justify-center items-center flex-col"
+                className="flex justify-center items-center flex-col mt-2"
               >
                 <ClipLoader color={"#365ad6"} size={20} />
               </div>

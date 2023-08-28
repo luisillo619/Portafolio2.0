@@ -28,11 +28,23 @@ export default function HomePage() {
   const { aboutRef, experienceRef, skillsRef, projectsRef, contactRef } =
     useContext(SectionRefsContext);
 
-  const Section = ({ children, height, reference, width = "100%" }) => (
-    <div style={{ height, width }} ref={reference} className="border">
-      {children}
-    </div>
-  );
+  const Section = ({ children, height, reference, width = "100%", id }) => {
+    if (id === "skills")
+      return (
+        <div
+          ref={reference}
+          class="border w-full h-fit md:h-[90vh]"
+        >
+          {children}
+        </div>
+      );
+    else
+      return (
+        <div style={{ height, width }} ref={reference} className="border">
+          {children}
+        </div>
+      );
+  };
 
   return (
     <>
@@ -53,7 +65,7 @@ export default function HomePage() {
                 <Experience />
               </Section>
 
-              <Section height="90vh" reference={skillsRef}>
+              <Section reference={skillsRef} id="skills">
                 <Skills />
               </Section>
 

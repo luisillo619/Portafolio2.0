@@ -19,7 +19,7 @@ const HardSkill = ({ skill }) => {
         onClick={openSkillDocs}
         src={skill.src}
       />
-      <p>{skill.title}</p>
+      <p className="font-bold text-blue-300">{skill.title}</p>
     </div>
   );
 };
